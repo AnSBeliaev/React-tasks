@@ -1,7 +1,7 @@
 import './styles.css';
 import { useState } from "react";
 
-export const Task = () => {
+export const Todos = () => {
   const [todosList, setTodosList] = useState([]);
   const [currentTodoTitle, setCurrentTodoTitle] = useState("");
   const [hasError, setHasError] = useState(false);
@@ -11,11 +11,13 @@ export const Task = () => {
       setHasError(true);
       return;
     };
+
     const newTask = {
       id: Date.now(),
       title: currentTodoTitle,
       checked: false,
     }
+
     setTodosList((prev) => [...prev, newTask])
     setCurrentTodoTitle("");
     setHasError(false);
@@ -49,7 +51,7 @@ export const Task = () => {
   }
 
   return (
-    <div>
+    <div className='todos'>
       <h1>Todo List</h1>
         {todosList.map((todoItem) => {
           return (

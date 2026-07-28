@@ -1,11 +1,22 @@
 import React from "react";
 
-// import { Task } from  '../components/Tasks/Tasks';
-import { HoverTest } from "../components/HoverTest/HoverTest"
+import { Todos } from  '../components/Todos';
+import { HoverTest } from "../components/HoverTest"
+import { Accordion } from  '../components/Accordion';
+import { Timer } from "../components/Timer"
+import { DebounceExample } from "../components/DebounceExample"
 
 function MainPage() {
     return (
-        <HoverTest />
+        <div>
+            <div className="example">
+                <Accordion />
+                <HoverTest />
+                <Todos />
+                <Timer />
+                <DebounceExample />
+            </div>
+        </div>
     );
 }
 
