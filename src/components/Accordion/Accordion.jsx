@@ -33,15 +33,16 @@ export const Accordion = () => {
   const [openId, setOpenId] = useState(null);
 
   const toggleAccordion = (id) => {
-    // Your code here
-    // If clicking on open item, close it
-    // If clicking on closed item, open it and close others
+    if (id !== openId) {
+      setOpenId(id);
+    } else {
+      setOpenId(null);
+    } 
   };
 
   return (
     <div className="app">
       <h1>Accordion Component</h1>
-
       <div className="info-box">
         <p>Click on any question to expand or collapse the answer</p>
       </div>
@@ -54,9 +55,9 @@ export const Accordion = () => {
               onClick={() => toggleAccordion(item.id)}
             >
               <span>{item.title}</span>
-              <span className="accordion-icon">▼</span>
+              <span className={`accordion-icon ${openId === item.id ? "rotateIcon" : ""}`}>▼</span>
             </button>
-            <div className="accordion-content">
+            <div className={`accordion-content ${openId === item.id ? "open" : ""}`}>
               <p>{item.content}</p>
             </div>
           </div>

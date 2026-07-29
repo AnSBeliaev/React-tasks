@@ -69,7 +69,7 @@ h1 {
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.9s ease;
 }
 
 .accordion-content p {
@@ -78,4 +78,15 @@ h1 {
   color: #666;
   line-height: 1.6;
   font-size: 14px;
+}
+
+.open {
+  max-height: 200px;
+  overflow: visible;
+  transition: max-height 0.9s ease;
+}
+
+.rotateIcon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }

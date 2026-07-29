@@ -1,20 +1,24 @@
 import React from "react";
 
-import { Todos } from  '../components/Todos';
-import { HoverTest } from "../components/HoverTest"
-import { Accordion } from  '../components/Accordion';
 import { Timer } from "../components/Timer"
+import { Todos } from  '../components/Todos';
+import { Toggle } from "../components/Toggle";
+import { HoverTest } from "../components/HoverTest"
+import { Carousel } from "../components/Carousel"
+import { Accordion } from  '../components/Accordion';
 import { DebounceExample } from "../components/DebounceExample"
 
 function MainPage() {
     return (
         <div>
             <div className="example">
-                <Accordion />
-                <HoverTest />
+                {/* <Timer />
                 <Todos />
-                <Timer />
-                <DebounceExample />
+                <Toggle />
+                <HoverTest />
+                <Accordion />
+                <DebounceExample /> */}
+                <Carousel />
             </div>
         </div>
     );
